@@ -1,0 +1,6 @@
+---
+applications:
+- name: <FRONTEND_NAME>
+  buildpacks:
+    - nginx_buildpack
+  memory: 256M

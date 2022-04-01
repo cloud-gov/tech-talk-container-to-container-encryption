@@ -1,0 +1,7 @@
+---
+applications:
+- name: <BACKEND_NAME>
+  no-route: true
+  buildpacks:
+    - python_buildpack
+  memory: 256M
