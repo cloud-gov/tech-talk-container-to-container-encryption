@@ -14,7 +14,7 @@ In order to implement Container-to-Container encryption you first need to set up
 
 Then you need to setup a network policy that allows your source application to communicate with your destination application, making sure to specify the port as `61443`. All traffic to this port uses SSL/TLS.
 
-`cf add-network-policy SOURCE_APP DESTINATION_APP -s --protocol tcp --port 61443`
+`cf add-network-policy SOURCE_APP DESTINATION_APP --protocol tcp --port 61443`
 
 ## About this demo
 
