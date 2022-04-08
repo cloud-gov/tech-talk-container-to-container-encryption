@@ -1,12 +1,19 @@
 import os
-from flask import Flask
+from flask import Flask, request
 
 app = Flask(__name__)
 
 
-@app.route('/')
+@app.route('/', methods=['POST', 'GET'])
 def data():
-    return "Congratulations, this message was requested securely"
+    error = ""
+    if request.method == 'POST':
+        if request.form['inputName'] != "":
+            name = request.form['inputName']
+            return "Congratulations {}, this message was requested securely".format(name)
+        else:
+            error = "Please enter a name"
+    return error
 
 
 port = os.getenv('PORT', '5000')

@@ -1,6 +1,6 @@
 ---
 applications:
-- name: <BACKEND_NAME>
+- name:
   no-route: true
   buildpacks:
     - python_buildpack

@@ -22,16 +22,18 @@ This Tech Talk demonstrates the use of Container-to-Container encryption by sett
 
 ## Using this demo
 
-To run this demo yourself, clone the repo to your local machine.
+To run this demo:
 
-Once the repo is cloned, update the following files:
+- Clone the repo to your local machine.
+- Do a cf login, and select the appropriate org and space
+- Update the demo/env.cfg file
+- Download [Bootstrap](https://getbootstrap.com/docs/5.1/getting-started/download/) files (bootstrap.min.css, bootstrap.bundle.min.js) and place into css and js folders.
+- Download [jquery](https://jquery.com/download/) (jquery-3.6.0.min.js) and place into js folder
+- Run the demo/run.sh script
 
-- frontend/manifest.yml
-- frontend/nginx.conf
-- backend/manifest.yml
+You can also manually run this demo as follows:
 
-Run `cf push` for the frontend and backend. Go to the frontend url. Click on the button, and confirm that it returns an error message.
-
-Set up your route and network policy.
-
-Once these are in place click on the test button again, and you should see the data sent from the backend application.
+- Update the manifests and nginx.conf files
+- Run `cf push` for the proxy and backend.
+- Set up your route and network policy.
+- Once these are in place go to your proxy url and test the app
