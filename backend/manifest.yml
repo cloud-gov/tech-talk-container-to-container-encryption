@@ -1,0 +1,7 @@
+---
+applications:
+- name:
+  no-route: true
+  buildpacks:
+    - python_buildpack
+  memory: 256M

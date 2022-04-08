@@ -1,0 +1,8 @@
+---
+applications:
+- name:
+  buildpacks:
+    - nginx_buildpack
+  memory: 256M
+  env:
+    PROXY_ROUTE: ((proxy_route))
